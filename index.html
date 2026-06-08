@@ -1,293 +1,202 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil Almyra Calista Naya Agung</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Data Diri - Cindya Putri Zahrotu Sylfa</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
 
-body{
-    background:linear-gradient(135deg,#dff1ff,#cbe7ff,#b6dcff);
-    min-height:100vh;
-    padding:40px;
-}
+        body{
+            min-height:100vh;
+            background: linear-gradient(135deg, #ff9ecf, #ffc7e8, #ffdff2);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-}
+        .card{
+            width:900px;
+            max-width:100%;
+            background:rgba(255,255,255,0.95);
+            border-radius:30px;
+            overflow:hidden;
+            box-shadow:0 15px 35px rgba(255,105,180,0.3);
+            animation: muncul 1s ease;
+        }
 
-.hero{
-    background:rgba(255,255,255,0.75);
-    backdrop-filter:blur(15px);
-    border-radius:35px;
-    padding:50px;
-    display:flex;
-    align-items:center;
-    gap:40px;
-    box-shadow:0 10px 35px rgba(0,0,0,0.08);
-    margin-bottom:25px;
-}
+        @keyframes muncul{
+            from{
+                opacity:0;
+                transform:translateY(30px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
 
-.profile-img{
-    width:250px;
-    height:250px;
-    border-radius:30px;
-    object-fit:cover;
-    border:6px solid white;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
-}
+        .header{
+            background:linear-gradient(135deg,#ff69b4,#ff85c1);
+            color:white;
+            text-align:center;
+            padding:40px 20px;
+        }
 
-.hero-text h1{
-    font-size:48px;
-    color:#1d4e89;
-}
+        .header h1{
+            font-size:35px;
+            margin-bottom:10px;
+        }
 
-.hero-text h3{
-    color:#5d84a8;
-    margin-top:10px;
-}
+        .header p{
+            font-size:18px;
+        }
 
-.hero-text p{
-    margin-top:15px;
-    color:#4b6275;
-    line-height:1.9;
-}
+        .content{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            padding:40px;
+            gap:30px;
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
+        .foto{
+            flex:1;
+            min-width:250px;
+            text-align:center;
+        }
 
-.card{
-    background:rgba(255,255,255,0.75);
-    backdrop-filter:blur(10px);
-    border-radius:25px;
-    padding:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
+        .foto img{
+            width:250px;
+            height:250px;
+            object-fit:cover;
+            border-radius:50%;
+            border:8px solid #ff8cc6;
+            box-shadow:0 10px 25px rgba(255,105,180,0.3);
+        }
 
-.card:hover{
-    transform:translateY(-8px);
-}
+        .info{
+            flex:2;
+            min-width:280px;
+        }
 
-.card h2{
-    color:#1d4e89;
-    margin-bottom:15px;
-}
+        .info h2{
+            color:#ff4fa0;
+            margin-bottom:20px;
+        }
 
-.card p,
-.card li{
-    color:#4b6275;
-    line-height:1.8;
-}
+        .data{
+            margin-bottom:15px;
+            padding:12px 15px;
+            background:#fff1f8;
+            border-left:5px solid #ff69b4;
+            border-radius:10px;
+        }
 
-.card ul{
-    list-style:none;
-}
+        .data strong{
+            color:#d63384;
+        }
 
-.motivasi{
-    text-align:center;
-    margin-bottom:25px;
-}
+        .cita{
+            margin-top:20px;
+            background:linear-gradient(135deg,#ffb6d9,#ffe0f0);
+            padding:20px;
+            border-radius:15px;
+        }
 
-.motivasi p{
-    font-size:18px;
-    font-style:italic;
-}
+        .cita h3{
+            color:#c2185b;
+            margin-bottom:10px;
+        }
 
-.hobi{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-}
+        .footer{
+            text-align:center;
+            padding:20px;
+            background:#fff1f8;
+            color:#d63384;
+            font-weight:600;
+        }
 
-.hobi span{
-    background:#d8ecff;
-    color:#1d4e89;
-    padding:10px 18px;
-    border-radius:30px;
-    font-weight:500;
-}
+        .love{
+            color:red;
+        }
 
-.cita{
-    text-align:center;
-}
+        @media(max-width:768px){
+            .content{
+                flex-direction:column;
+            }
 
-.cita h3{
-    font-size:42px;
-    color:#1d4e89;
-    margin:10px 0;
-}
-
-.instagram{
-    text-align:center;
-    margin-top:30px;
-}
-
-.instagram a{
-    text-decoration:none;
-    background:#1d4e89;
-    color:white;
-    padding:15px 35px;
-    border-radius:50px;
-    font-weight:600;
-    display:inline-block;
-    transition:0.3s;
-}
-
-.instagram a:hover{
-    transform:scale(1.05);
-}
-
-.footer{
-    text-align:center;
-    margin-top:35px;
-    color:#1d4e89;
-    font-weight:500;
-}
-
-@media(max-width:768px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero-text h1{
-    font-size:35px;
-}
-
-.profile-img{
-    width:200px;
-    height:200px;
-}
-
-}
-</style>
+            .header h1{
+                font-size:28px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="card">
 
-<div class="hero">
+        <div class="header">
+            <h1>🌸 Profil Data Diri 🌸</h1>
+            <p>SMKS Kesehatan Yannas Husada Bangkalan</p>
+        </div>
 
-<!-- GANTI FOTO DENGAN FOTO KAMU -->
-<img src="almyra.jpg" alt="Foto Almyra" class="profile-img">
+        <div class="content">
 
-<div class="hero-text">
-<h1>Almyra Calista Naya Agung</h1>
-<h3>XB Farmasi • SMKS Kesehatan Yannas Husada Bangkalan</h3>
+            <div class="foto">
+                <!-- Ganti foto.jpg dengan foto milikmu -->
+                <img src="foto.jpg" alt="Foto Profil">
+            </div>
 
-<p>
-Halo! Saya Almyra Calista Naya Agung, siswi kelas XB Farmasi di
-SMKS Kesehatan Yannas Husada Bangkalan. Saya memiliki semangat
-untuk terus belajar, berkembang, dan mengejar cita-cita menjadi
-seorang Apoteker. Saya percaya bahwa kerja keras, doa, dan
-konsistensi adalah kunci untuk meraih masa depan yang gemilang.
-</p>
+            <div class="info">
 
-</div>
+                <h2>✨ Tentang Saya</h2>
 
-</div>
+                <div class="data">
+                    <strong>Nama:</strong> Cindya Putri Zahrotu Sylfa
+                </div>
 
-<div class="card motivasi">
+                <div class="data">
+                    <strong>Sekolah:</strong> SMKS Kesehatan Yannas Husada Bangkalan
+                </div>
 
-<h2>✨ Motivasi Hidup ✨</h2>
+                <div class="data">
+                    <strong>Kelas:</strong> XB Farmasi
+                </div>
 
-<p>
-"Tidak ada mimpi yang terlalu tinggi jika kita mau berusaha dan
-tidak ada kesuksesan yang datang tanpa kerja keras. Teruslah
-melangkah, karena setiap usaha hari ini adalah investasi untuk
-masa depan yang lebih indah."
-</p>
+                <div class="data">
+                    <strong>Hobi:</strong> 🏊 Renang dan 🚶 Jalan-jalan
+                </div>
 
-<br>
+                <div class="cita">
+                    <h3>🎓 Cita-cita</h3>
+                    <p>
+                        Saya memiliki cita-cita menjadi seorang
+                        <b>Apoteker</b> yang profesional, berkompeten,
+                        dan dapat membantu masyarakat dalam bidang
+                        kesehatan serta penggunaan obat yang tepat.
+                    </p>
+                </div>
 
-<h3 style="color:#1d4e89;">
-💙 Dream Big • Study Hard • Stay Humble 💙
-</h3>
+            </div>
 
-</div>
+        </div>
 
-<div class="grid">
+        <div class="footer">
+            Dibuat dengan <span class="love">❤️</span> oleh
+            <b>Cindya Putri Zahrotu Sylfa</b>
+        </div>
 
-<div class="card">
-
-<h2>🌷 Tentang Saya</h2>
-
-<p>
-Saya adalah seseorang yang menyukai pengalaman baru dan senang
-mengembangkan kemampuan diri. Saya percaya bahwa belajar dengan
-sungguh-sungguh akan membuka banyak kesempatan untuk mencapai
-impian dan memberikan manfaat bagi orang lain.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>📋 Data Diri</h2>
-
-<ul>
-<li><b>Nama :</b> Almyra Calista Naya Agung</li>
-<li><b>Kelas :</b> XB Farmasi</li>
-<li><b>Sekolah :</b> SMKS Kesehatan Yannas Husada Bangkalan</li>
-<li><b>Cita-cita :</b> Apoteker</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>💙 Hobi</h2>
-
-<div class="hobi">
-<span>✈️ Travelling</span>
-<span>🍳 Cooking</span>
-</div>
-
-</div>
-
-<div class="card cita">
-
-<h2>🎯 Cita-Cita</h2>
-
-<h3>APOTEKER</h3>
-
-<p>
-Saya bercita-cita menjadi seorang Apoteker yang profesional,
-teliti, bertanggung jawab, dan mampu membantu masyarakat dalam
-bidang kesehatan melalui pelayanan obat yang aman dan tepat.
-</p>
-
-</div>
-
-</div>
-
-<div class="instagram">
-<a href="https://instagram.com/nnaayzz_" target="_blank">
-📷 @nnaayzz_
-</a>
-</div>
-
-<div class="footer">
-© 2026 • Profil Almyra Calista Naya Agung 💙
-</div>
-
-</div>
+    </div>
 
 </body>
 </html>
